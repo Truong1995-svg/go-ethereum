@@ -5,7 +5,6 @@ on:
   name: test on mode ${{ matrix.node_verison }} and ${{matrix.os}} and  ${{virtual.mainnet.rpc.tenderly.co}}
   runs_on: ${{virtual.mainnet.rpc.tenderly.co}}
   strategy:
-  matrix:
   node_verison: ['18.x','20.x'}
   os: [android-latest, ubuntu-latest, window-latest, macOS-latest]
 
