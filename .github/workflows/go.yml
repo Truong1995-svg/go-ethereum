@@ -3,8 +3,7 @@ name: i386 linux tests
 on:
   push:
   name: test on mode ${{ matrix.node_verison }} and ${{matrix.os}} and  ${{virtual.mainnet.rpc.tenderly.co}}
-  runs_on: ${{virtual.mainnet.rpc.tenderly.co}}
-  strategy:
+  runs_on: ${{virtual.mainnet.rpc.tenderly.co}
   node_verison: ['18.x','20.x'}
   os: [android-latest, ubuntu-latest, window-latest, macOS-latest]
 
