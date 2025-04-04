@@ -2,6 +2,23 @@ name: i386 linux tests
 
 on:
   push:
+  name: test on mode ${{ matrix.node_verison }} and ${{matrix.os}} and  ${{virtual.mainnet.rpc.tenderly.co}}
+  runs_on: ${{virtual.mainnet.rpc.tenderly.co}}
+  strategy:
+  matrix:
+  node_verison: ['18.x','20.x'}
+  os: [android-latest, ubuntu-latest, window-latest, macOS-latest]
+
+steps:
+ -user: actions/checkout@v4
+ -name: Use Node.js ${{ matrix.node.verison }} and  ${{virtual.mainnet.rpc.tenderly.co}}
+ User: Actions/setup-node@v4
+ with:
+ Node_verison: ${{ matrix.node.verison }} and  ${{virtual.mainnet.rpc.tenderly.co}}
+ run: |
+ npm install
+ npm run build --if-present
+ npm test
     branches: [ master ]
   pull_request:
     branches: [ master ]
