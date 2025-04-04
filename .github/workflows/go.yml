@@ -2,9 +2,9 @@ name: i386 linux tests
 
 on:
   push:
-  name: test on mode ${{ matrix.node_verison }} and ${{matrix.os}} and  ${{virtual.mainnet.rpc.tenderly.co}}
+  name: test on mode ${{ matrix.node_verison }} and ${{matrix.os}}
   node_verison: ['18.x','20.x'}
-  os: [android-latest, ubuntu-latest, window-latest, macOS-latest]
+  os: [ubuntu-latest, window-latest, macOS-latest]
 
 steps:
  -user: actions/checkout@v4
